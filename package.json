@@ -25,7 +25,7 @@
     "eslint-plugin-react": "7.1.0"
   },
   "scripts": {
-    "start": "yarn && cd client && yarn && yarn build && cd .. && node server.js",
+    "start": "npm cache clean --force && rm -rf node_modules && cd client && rm -rf node_modules && rm -rf build && cd .. && yarn && cd client && yarn && yarn build && cd .. && node server.js",
     "build": "yarn && cd client && yarn && cd..",
     "prod": "yarn && cd client && yarn && yarn build && cd .. && node server.js",
     "server": "nodemon server.js",
