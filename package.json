@@ -1,0 +1,37 @@
+{
+  "name": "react-express-azure",
+  "version": "1.0.0",
+  "description": "Test App",
+  "main": "server.js",
+  "author": "ECINFO",
+  "license": "MIT",
+  "dependencies": {
+    "async": "2.6.2",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.0",
+    "concurrently": "^3.5.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "express4-tedious": "^0.3.0",
+    "nodemon": "^1.12.1",
+    "tedious": "^6.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0"
+  },
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "node server.js",
+    "build": "yarn && cd client && yarn && cd..",
+    "prod": "cd client && yarn && yarn build && cd .. && node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
