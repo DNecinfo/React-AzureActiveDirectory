@@ -25,9 +25,9 @@
     "eslint-plugin-react": "7.1.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "yarn && cd client && yarn && yarn build && cd .. && node server.js",
     "build": "yarn && cd client && yarn && cd..",
-    "prod": "cd client && yarn && yarn build && cd .. && node server.js",
+    "prod": "yarn && cd client && yarn && yarn build && cd .. && node server.js",
     "server": "nodemon server.js",
     "client": "cd client && yarn start",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
