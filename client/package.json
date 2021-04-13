@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-aad-msal": "^0.4.9",
-    "react-adal": "^0.4.24",
+    "react-adal": "^0.5.1",
     "react-dom": "^16.8.6",
     "react-redux": "5.0.7",
     "react-scripts": "3.0.1",
